@@ -14,9 +14,8 @@ router.register(r'articles', views.ArticleViewSet)
 router.register(r'users', views.UserViewSet)
 router.register(r'groups', views.GroupViewSet)
 
-app_name = 'blogapi'
 urlpatterns = [
     # /blogapi/
-    path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path(r'', include(router.urls)),
+    path(r'api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

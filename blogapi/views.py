@@ -19,7 +19,7 @@ class ArticleViewSet(viewsets.ModelViewSet):
     '''
     获取文章信息的api
     '''
-    queryset = Article.objects.all()
+    queryset = Article.objects.all()[:10]
     serializer_class = ArticleSerializer
 
 
